@@ -1,0 +1,37 @@
+.individual {
+    border: 1px solid #bbb;
+    margin-bottom: 2%;
+    padding: 2%;
+    text-align: justify;
+    background-color: #92d2dc;
+    height: 100% !important;
+    min-height: auto;
+    float: left;
+    min-width: auto;
+    width: 100%;
+
+}
+.bd-inner{
+    float: left;
+    margin-top: 5%;
+    width: 100%;    
+}
+.mv-search{
+    float: left;
+    
+    margin-bottom: 2%;
+    width: 100%;  
+}
+
+.fav{
+    float: left;
+    margin-bottom: 2%;
+    width: 100%;
+}
+.fav div{
+    float: left !important;
+    margin-right: 5%!important;
+}
+.dis{
+    float: right !important;;
+}

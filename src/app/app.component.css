@@ -1,0 +1,23 @@
+#navbar {
+    background: linear-gradient(to bottom, #646464 0%,#0e0e0e 100%);
+    border-top: 1px solid #444;
+    color: #fff;
+    font: 10pt Verdana, Arial, sans-serif;
+    min-height: 54px;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    z-index: 200;
+    line-height: 22px;
+    padding-top: 13px;
+}
+.mainmenu.col-md-4 {
+    text-transform: uppercase;
+}
+.mainmenu a{
+    color: white;
+    padding-left: 2%;
+}
+
+
+

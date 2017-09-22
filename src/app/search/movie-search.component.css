@@ -1,0 +1,25 @@
+.search-result{
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 5px;
+    background-color: white;
+    cursor: pointer;
+    width: 100% !important;
+    min-height: 30px !important;
+    max-width: 300px !important;
+  }
+
+  .search-result:hover {
+    color: #eee;
+    background-color: #607D8B;
+  }
+  
+  #search-box{
+    width: 100%;
+    max-width: 300px;
+    min-height: 27px;
+    border-radius: 26px;
+    border: 1px solid #4c1717;
+  }
+  
