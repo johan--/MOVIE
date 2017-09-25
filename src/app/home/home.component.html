@@ -1,19 +1,31 @@
 <div class="bd-inner">
-    
-    <div *ngFor="let movie of movies;let idx = index">
-        <div class="col-md-4">
-            <div class="individual">
-            <div><label>movie ID: </label>{{movie.id}}</div>
-            <div><label>movie original title: </label>{{movie.original_title}}</div>
-            <div><label>movie relase date: </label>{{movie.release_date}}</div>
-            <div><label>movie title: </label>{{movie.title}} </div>
-            <div><button type="button" class="btn btn-primary dis" (click)="gotoDis(idx)">Dislik </button></div>
-            </div>
-            <div class="fav">
-                
+   <div *ngIf="valueexit; else falsyTemplate">
+   
+        <div *ngFor="let movie of movies;let idx = index">
+            <div class="col-md-4">
+                <div class="individual">
+                <div><label>movie ID: </label>{{movie.id}}</div>
+                <div><label>movie original title: </label>{{movie.original_title}}</div>
+                <div><label>movie relase date: </label>{{movie.release_date}}</div>
+                <div><label>movie title: </label>{{movie.title}} </div>
+                <div><button type="button" class="btn btn-primary dis" (click)="gotoDis(idx)">Dislik </button></div>
+                </div>
+                <div class="fav">
                     
+                        
+                </div>
             </div>
         </div>
     </div>
+   <ng-template  #falsyTemplate > 
+        <div class="container">
+          <div class="row vertical-center-row">
+                <div class="alert alert-warning fade in text-center col-md-8 col-md-offset-2"> 
+                    Currently  your favourite list is empty.Please select one favourite...
+                    <a routerLink = "/search">Search</a>
+                </div>
+          </div>
+        </div>
+   </ng-template>
 
 </div>

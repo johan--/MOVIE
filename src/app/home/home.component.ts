@@ -8,7 +8,8 @@ import { Router }            from '@angular/router';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  movies:string;
+  valueexit: string;
+  movies: string;
   constructor(private router: Router) { 
     
   }
@@ -17,7 +18,7 @@ export class HomeComponent implements OnInit {
      //this.movies = window.localStorage.getItem('films');
      this.movies = JSON.parse(window.localStorage.getItem("data"));
      
-     console.log(this.movies);
+     //console.log(this.movies);
   }
   gotoDis(idx:number):void{   
     //debugger;
@@ -26,12 +27,19 @@ export class HomeComponent implements OnInit {
     data = JSON.parse(window.localStorage.getItem("data"));
      data.splice(idx, 1);  
      window.localStorage.setItem('data', JSON.stringify(data));
-     //this.router.navigate(['/home']);
      window.location.reload();
    // window.localStorage.removeItem('data');   
     
   }
+  firstLoad(){
+    // debugger;
+    var data=[];
+    data = JSON.parse(window.localStorage.getItem("data"));
+    // console.log("ss" + data.length)
+    if ( data.length !== 0) this.valueexit = 'valueexit'
+  }
   ngOnInit() {
+    this.firstLoad();
     this.getFavorite();
   }
 

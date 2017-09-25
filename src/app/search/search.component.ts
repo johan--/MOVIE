@@ -48,7 +48,7 @@ export class SearchComponent implements OnInit {
 */
     this.route.paramMap
     .switchMap((params: ParamMap) => {
-      console.log(this.movieService.getMovie(params.get('name')))
+     // console.log(this.movieService.getMovie(params.get('name')))
       return this.movieService.getMovie(params.get('name'))
     })
     .subscribe(movies => 
