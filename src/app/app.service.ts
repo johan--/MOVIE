@@ -24,7 +24,7 @@ export class AppService {
   }*/
 
 
- getMovie(name: string): Promise<Movie[]> {
+getMovie(name: string): Promise<Movie[]> {
   return this.http.get(`https://api.themoviedb.org/3/search/movie?api_key=c6ea6031412642a807ae3589783d57dc&query=${name}`)
              .toPromise()
              .then(response => response.json().results as Movie[])
@@ -33,6 +33,18 @@ export class AppService {
                return response.json().results as Movie[]
               })
 */
+             .catch(this.handleError);           
+}
+goPopular(): Promise<Movie[]> {
+  return this.http.get(`https://api.themoviedb.org/3/movie/popular?api_key=c6ea6031412642a807ae3589783d57dc`)
+             .toPromise()
+             .then(response => response.json().results as Movie[])
+             .catch(this.handleError);           
+}
+goLatest(): Promise<Movie[]> {
+  return this.http.get(`https://api.themoviedb.org/3/movie/latest?api_key=c6ea6031412642a807ae3589783d57dc`)
+             .toPromise()
+             .then(response => response.json().results as Movie[])
              .catch(this.handleError);           
 }
 private handleError(error:any): Promise<any> {

@@ -1,6 +1,6 @@
-<div id="search-component">
-        <h4>Movie Search</h4>
-        <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+<div id="search-component" class="col-md-3">
+       
+        <input #searchBox id="search-box" (keyup)="search(searchBox.value)" placeholder="movie serach"/>
         <div>
           <div *ngFor="let movie of movies | async"
                (click)="gotoDetail(movie)" class="search-result" >

@@ -1,6 +1,11 @@
 <div class="bd-inner">
     <div class="col-md-8 mv-search">
       <movie-search></movie-search>
+      <div class="sortmovie col-md-7" >
+          <button class="btn btn-primary dropdown-toggle" >Release date</button>
+          <button class="btn btn-primary dropdown-toggle" (click)="goPopular()">Popularity</button>
+          <button class="btn btn-primary dropdown-toggle">Title</button>
+      </div>
     </div>
     <div *ngFor="let movie of movies">
       
@@ -10,6 +15,7 @@
           <div><label>movie original title: </label>{{movie.original_title}}</div>
           <div><label>movie relase date: </label>{{movie.release_date}}</div>
           <div><label>movie title: </label>{{movie.title}} </div>
+          <div><label>movie popularity: </label>{{movie.popularity}} </div>
           <div><button type="button" class="btn btn-primary favbt" (click)="gotoFav(movie)">Favourite </button></div>
         </div>
         <div class="fav">

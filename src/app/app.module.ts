@@ -12,6 +12,7 @@ import { MovieSearchComponent } from './search/movie-search.component';
 
 import { AppService }          from './app.service';
 import { AppRoutingModule }     from './app-routing.module';
+
 //import {WebStorageModule, LocalStorageService} from "angular-localstorage";
 @NgModule({
   declarations: [
